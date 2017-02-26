@@ -15,10 +15,10 @@ const onTestCompleted = (dispatch, id) => completed => {
 
 export const startTests = () => (dispatch, getState) => {
   const { tests } = getState().test;
-
-
-  tests.forEach(test => {
-    dispatch({ type: TEST_INIT, id: test.id });
-    test.run(onTestCompleted(dispatch, test.id))
+  console.log(tests)
+  Object.keys(tests).forEach(test => {
+    console.log(tests[test])
+    dispatch({ type: TEST_INIT, id: tests[test].id });
+    tests[test].run(onTestCompleted(dispatch, tests[test].id))
   });
 }

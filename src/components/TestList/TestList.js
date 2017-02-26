@@ -2,12 +2,14 @@ import React, { PropTypes } from 'react';
 import TestItem from '../TestItem/TestItem';
 
 const TestList = ({ tests, startTests }) => {
+  console.log(tests)
   const renderTestItems = tests =>
-    tests.map(test => (
+    Object.keys(tests)
+      .map(test => (
       <TestItem
-        key={test.id}
-        title={test.description}
-
+        key={tests[test].id}
+        title={tests[test].description}
+        status={tests[test].state}
       />
     ));
 

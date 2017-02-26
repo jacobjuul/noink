@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
 import './TestItem.scss';
 
-const TestItem = ({ title }) => {
+const TestItem = ({ title, status }) => {
   return (
     <div className="TestItem">
       <div className="TestItem-title">{title}</div>
+      <div>{status}</div>
     </div>
   )
 };
