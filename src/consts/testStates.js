@@ -1,4 +1,4 @@
-export const NOT_STARTED = 'NOT_STARTED';
-export const RUNNING = 'RUNNING';
-export const PASSED = 'PASSED';
-export const FAILED = 'FAILED';
+export const NOT_STARTED = 'Not started';
+export const RUNNING = 'Running';
+export const PASSED = 'Passed';
+export const FAILED = 'Failed';

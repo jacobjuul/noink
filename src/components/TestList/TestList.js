@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import TestItem from '../TestItem/TestItem';
+import './TestList.scss'
 
 const TestList = ({ tests, startTests }) => {
   console.log(tests)
@@ -15,7 +16,7 @@ const TestList = ({ tests, startTests }) => {
 
   return (
     <div className="TestList">
-      <button onClick={startTests}>Start Tests</button>
+      <div className="TestList-runtests" onClick={startTests}>Start Tests</div>
       <div className="TestList-title">Tests</div>
       {renderTestItems(tests)}
     </div>
