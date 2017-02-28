@@ -6,11 +6,9 @@ import {
 } from '../consts/actionTypes';
 
 const onTestCompleted = (dispatch, id) => completed => {
-  dispatch({
-    type: completed
+    completed
     ? dispatch({ type: TEST_SUCCESS, id })
     : dispatch({ type: TEST_FAILED, id })
-  })
 }
 
 export const startTests = () => (dispatch, getState) => {
